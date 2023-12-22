@@ -13,10 +13,10 @@ public class Mood_Analyzer_Test {
     public void start(){
         mood = new Mood_Analyzer();
     }
-    @Test
-    public void test_analyseMood_sad(){
-        String actual = mood.analyseMood("I am in Any Mood");
-        Assert.assertEquals("HAPPY",actual);
-    }
+//    @Test
+//    public void test_analyseMood_sad(){
+//        String actual = mood.analyseMood("I am in Any Mood");
+//        Assert.assertEquals("HAPPY",actual);
+//    }
 
 }

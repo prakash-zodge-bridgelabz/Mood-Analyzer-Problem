@@ -1,14 +1,25 @@
 package com.bridgelabz;
-// UC 1
-// Given a Message, ability to analyse and respond Happy or Sad Mood
-// - Create MoodAnalyser Object
-// - Call analyseMood function with message as parameter and return Happy or Sad Mood
+// Refactor
+// Refactor the code to take the mood message in Constructor
+//- Note:
+//- MoodAnalyser will have a message Field
+//- MoodAnalyser will have 2 Constructors
+//      – Default - MoodAnalyser() and with Parameters – MoodAnalyser(message)
+//- analyseMood method will change to support no parameters and use message Field defined
+// for the Class
 public class Mood_Analyzer {
+    Mood_Analyzer(){
+        //Default constructor
+    }
+    String message;
+    Mood_Analyzer(String message){      // Parameterized constructor
+        this.message = message;
+    }
     public static void main(String[] args) {
         System.out.println("Mood Analyzer Problem");
     }
-    public String analyseMood(String msg){
-        if(msg.contains("sad")){
+    public String analyseMood(){        //Changed to no parameters
+        if(message.contains("sad")){
             return "SAD";
         }
         else {
