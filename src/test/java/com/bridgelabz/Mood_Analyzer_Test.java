@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 // Repeat Test Case : 1.2
-// Given “I am in Happy Mood” message in Constructor Should Return SAD
+// Given “I am in Happy Mood” message in Constructor Should Return HAPPY
 // - To pass this Test Case when calling analyseMood method with no params should return HAPPY
 public class Mood_Analyzer_Test {
     Mood_Analyzer mood;
