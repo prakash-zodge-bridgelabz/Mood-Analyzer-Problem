@@ -1,16 +1,8 @@
 package com.bridgelabz;
-// Refactor
-// Refactor the code to take the mood message in Constructor
-//- Note:
-//- MoodAnalyser will have a message Field
-//- MoodAnalyser will have 2 Constructors
-//      – Default - MoodAnalyser() and with Parameters – MoodAnalyser(message)
-//- analyseMood method will change to support no parameters and use message Field defined
-// for the Class
+// Use Case 2
+// Handle Exception if User Provides Invalid Mood
+//- Like NULL
 public class Mood_Analyzer {
-    Mood_Analyzer(){
-        //Default constructor
-    }
     String message;
     Mood_Analyzer(String message){      // Parameterized constructor
         this.message = message;
@@ -19,11 +11,16 @@ public class Mood_Analyzer {
         System.out.println("Mood Analyzer Problem");
     }
     public String analyseMood(){        //Changed to no parameters
-        if(message.contains("sad")){
-            return "SAD";
+        try{
+            if(message.contains("sad")){
+                return "SAD";
+            }
+            else {
+                return "HAPPY";
+            }
+        }catch(Exception e){         //Handle Exception if User Provides Invalid Mood like null
+            return e.getMessage();
         }
-        else {
-            return "HAPPY";
-        }
+
     }
 }
