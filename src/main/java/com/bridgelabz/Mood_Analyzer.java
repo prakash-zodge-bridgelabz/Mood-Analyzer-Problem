@@ -19,7 +19,7 @@ public class Mood_Analyzer {
                 return "HAPPY";
             }
         }catch(Exception e){         //Handle Exception if User Provides Invalid Mood like null
-            return e.getMessage();
+            return "HAPPY";
         }
 
     }
