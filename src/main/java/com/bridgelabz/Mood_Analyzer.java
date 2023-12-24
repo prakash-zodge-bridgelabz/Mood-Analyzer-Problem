@@ -34,9 +34,9 @@ public class Mood_Analyzer {
             }
         }catch(MoodAnalysisException e){         //Handle Exception if User Provides Invalid Mood like null
             switch (e.enum_mood){
-                case Null_Mood: return "Null mood";
-                case Empty_Mood: return "Empty mood";
-                default: return "Invalid mood";
+                case Null_Mood: return "Custom Exception: Null mood";
+                case Empty_Mood: return "Custom Exception: Empty mood";
+                default: return "Custom Exception: Invalid mood";
             }
         }
 
